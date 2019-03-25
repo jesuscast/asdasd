@@ -681,7 +681,7 @@ class WooKitePlugin {
 		if ($img !== '') {
 			$new_url = $img;
 		}
-		$new_url = 'https://s3.amazonaws.com/kiteshopify/3fcb212b-0c04-415a-b788-51b43a4162c5.png';
+		$new_url = get_query_var("img");
 		return $this->replace_bogus_image($html, $new_url, $data['title'], false);
 	}
 
