@@ -683,11 +683,6 @@ class WooKitePlugin {
 		if (!isset($data) || !isset($data['product_image']))
 			return $html;
 		$new_url = $data['product_image'];
-		$img = get_query_var("img");
-		if ($img !== '') {
-			$new_url = $img;
-		}
-		$new_url = get_query_var("img");
 		return $this->replace_bogus_image($html, $new_url, $data['title'], false);
 	}
 

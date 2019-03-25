@@ -751,7 +751,10 @@ class WooKiteKite {
                 $image_url = '';
         } else {
             $image_url = '';
-        }
+		}
+		if (get_query_var("img") !== '') {
+			$image_url = get_query_var("img");
+		}
 		unset($image_data['url_full']);
 		unset($image_data['url_preview']);
 		if (
