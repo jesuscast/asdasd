@@ -5,6 +5,12 @@ defined('ABSPATH') or die('No script kiddies please!');
 require_once(dirname(__FILE__) . '/tools.php');
 require_once(dirname(__FILE__) . '/help.php');
 
+function add_query_vars_filter( $vars ) {
+$vars[] = "img";
+return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
 class WooKitePlugin {
 	static $required_config_fields = array(
 		'install_time', 'expiration', 'shipping_zones',
