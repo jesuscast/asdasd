@@ -66,5 +66,14 @@ var wookite_product_images = {};
         }
     }
 
+setTimeout(() => {
+    const originalAction = jQuery(".variations_form").attr("action");
+    if (originalAction) {
+        const url = new URL(originalAction);
+        url.search = new URLSearchParams(window.location.search);
+        jQuery(".variations_form").attr("action", url.href);
+    }
+}, 100);
+
 })(jQuery);
 
