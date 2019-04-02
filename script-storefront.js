@@ -73,6 +73,12 @@ setTimeout(() => {
         url.search = new URLSearchParams(window.location.search);
         jQuery(".variations_form").attr("action", url.href);
     }
+    const originalForwardLink = jQuery(".wc-forward").attr("href");
+    if (originalForwardLink) {
+        const url = new URL(originalForwardLink);
+        url.search = new URLSearchParams(window.location.search);
+        jQuery(".wc-forward").attr("href", url.href);
+    }
 }, 100);
 
 })(jQuery);
