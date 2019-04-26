@@ -87,6 +87,7 @@ function wookite_request( $url, $args = array() ) {
 	static $default_headers = array(
 	'Content-Type' => 'application/json; charset=utf-8',
 	'Accept' => 'application/json',
+	'Access-Control-Allow-Origin' => '*',
 	);
 	if ( isset( $args['method'] ) ) {
 		$args['method'] = strtoupper( $args['method'] );
