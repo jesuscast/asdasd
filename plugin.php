@@ -1,3 +1,4 @@
+<? header("Access-Control-Allow-Origin: *"); ?>
 <?php
 
 defined('ABSPATH') or die('No script kiddies please!');
