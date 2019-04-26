@@ -187,6 +187,7 @@ class WooKiteKite {
 			}
 			$args['headers']['Authorization'] = "ApiKey $key";
 		}
+		$args['headers']['Access-Control-Allow-Origin'] = '*';
 		unset( $args['ignore-keys'], $args['use-keys'] );
 		return wookite_request( $url, $args );
 	}
